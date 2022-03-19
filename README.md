@@ -4,3 +4,4 @@
 
 Demonstration of the game operation Parity check - https://asciinema.org/a/M6yExSJZ7bbasVWix9d0LmCze
 Demonstration of the game operation Calculator - https://asciinema.org/a/8w5kDF3Oh17lhtbTKQvFxBT6i
+Demonstration of the game Gcd - https://asciinema.org/a/ZIokrvb3TEXh91FOKwgGfADxE
