@@ -1,6 +1,5 @@
 import readLineSync from 'readline-sync';
-import getRandomInt from '../index.js';
-import askName from '../src/cli.js';
+import { getRandomInt, askName } from '../src/index.js';
 
 const parityCheck = () => {
   const userName = askName();
