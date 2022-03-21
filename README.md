@@ -18,8 +18,9 @@ INSTALLATION
 
 3) Создаем локальную связь командой "sudo npm link" 
 
-Далее можно запустить игры. 
-Ниже продимонстрирован запуск каждой игры.
+Всё готово к запуску !
+
+Ниже запуск каждой игры.
 
 Демонстрация работы игры "Проверка на чётность"
 [![asciicast](https://asciinema.org/a/M6yExSJZ7bbasVWix9d0LmCze.svg)](https://asciinema.org/a/M6yExSJZ7bbasVWix9d0LmCze)
