@@ -23,7 +23,7 @@ export function gcd() {
       return;
     }
   }
-  console.log(`Congratulation, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 }
 function determinantNOD() {
   // eslint-disable-next-line no-var
