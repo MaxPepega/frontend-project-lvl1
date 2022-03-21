@@ -3,7 +3,7 @@ import { getRandomInt, askName } from '../src/index.js';
 
 function arrayConstruct() {
   const Array = [];
-  const lengthProgession = getRandomInt(5, 10);
+  const lengthProgession = getRandomInt(6, 10);
   const firstNumber = getRandomInt(1, 100);
   const stepProgression = getRandomInt(1, 10);
   Array[0] = firstNumber;
