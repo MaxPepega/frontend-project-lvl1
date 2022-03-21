@@ -31,7 +31,7 @@ const numberCalculated = () => {
       return;
     }
   }
-  console.log(`Congratulation, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default numberCalculated;
