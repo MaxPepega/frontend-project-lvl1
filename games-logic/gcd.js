@@ -2,6 +2,7 @@ import readLineSync from 'readline-sync';
 import { getRandomInt, askName } from '../src/index.js';
 
 export function gcd() {
+  console.log('Welcome to the Brain Games!');
   const name = askName();
   const round = 3;
   console.log('Find the greatest common divisor of given numbers.');

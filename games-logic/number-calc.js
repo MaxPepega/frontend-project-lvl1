@@ -1,6 +1,7 @@
 import readLineSync from 'readline-sync';
 import { askName, getRandomInt, getRandomSymbol } from '../src/index.js';
 
+console.log('Welcome to the Brain Games!');
 const name = askName();
 const numberCalculated = () => {
   console.log('What is the result of the expression?');

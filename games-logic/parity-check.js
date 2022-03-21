@@ -2,6 +2,7 @@ import readLineSync from 'readline-sync';
 import { getRandomInt, askName } from '../src/index.js';
 
 const parityCheck = () => {
+  console.log('Welcome to the Brain Games!');
   const userName = askName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const round = 3;
