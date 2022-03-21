@@ -24,11 +24,11 @@ const parityCheck = () => {
         console.log('Correct!');
       } else {
         console.log('"yes" is wrong answer ;(. Correct answer was "no".');
-        console.log(`Let's try again, ${userName}`);
+        console.log(`Let's try again, ${userName}!`);
         return;
       }
     }
-  }
+  }S
   console.log(`Congratulations, ${userName}!`);
 };
 export default parityCheck;
