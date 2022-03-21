@@ -28,7 +28,7 @@ const parityCheck = () => {
         return;
       }
     }
-  }S
+  }
   console.log(`Congratulations, ${userName}!`);
 };
 export default parityCheck;
