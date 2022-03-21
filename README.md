@@ -2,6 +2,25 @@
 [![Actions Status](https://github.com/MaxPepega/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/MaxPepega/frontend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
+
+Frontend-project-lvl1 game-life
+================================
+
+Первый проект в курсе 
+
+INSTALLATION
+------------
+
+1) Клонируем проект: 
+    git clone https://github.com/MaxPepega/frontend-project-lvl1.git
+
+2) Переходим в корень и устанавливаем npm командой "make install" 
+
+3) Создаем локальную связь командой "sudo npm link" 
+
+Далее можно запустить игры. 
+Ниже продимонстрирован запуск каждой игры.
+
 Демонстрация работы игры "Проверка на чётность"
 [![asciicast](https://asciinema.org/a/M6yExSJZ7bbasVWix9d0LmCze.svg)](https://asciinema.org/a/M6yExSJZ7bbasVWix9d0LmCze)
 

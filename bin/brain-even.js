@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import parityCheck from '../games-logic/parity-check.js';
+import parityCheck from '../game/parity-check.js';
 
 parityCheck();

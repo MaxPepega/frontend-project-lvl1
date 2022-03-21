@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import prime from '../games-logic/prime.js';
+import prime from '../game/prime.js';
 
 prime();
