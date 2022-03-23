@@ -1,9 +1,10 @@
 import readLineSync from 'readline-sync';
-import { getRandomInt, askName } from '../src/index.js';
+import {
+  getRandomInt, askName, correctAnsw, unCorrectAnsw, Congratulations,
+} from '../index.js';
 
 const parityCheck = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = askName();
+  askName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const round = 3;
   for (let i = 1; i <= round; i += 1) {
@@ -12,23 +13,21 @@ const parityCheck = () => {
     const Answer = readLineSync.question('Your answer: ');
     if (number % 2 === 0) {
       if (Answer === 'yes') {
-        console.log('Correct!');
+        correctAnsw();
       } else {
-        console.log('"yes" is wrong answer ;(. Correct answer was "no".');
-        console.log(`Let's try again, ${userName}!`);
+        unCorrectAnsw();
         return;
       }
     }
     if (number % 2 !== 0) {
       if (Answer === 'no') {
-        console.log('Correct!');
+        correctAnsw();
       } else {
-        console.log('"yes" is wrong answer ;(. Correct answer was "no".');
-        console.log(`Let's try again, ${userName}!`);
+        unCorrectAnsw();
         return;
       }
     }
   }
-  console.log(`Congratulations, ${userName}!`);
+  Congratulations();
 };
 export default parityCheck;

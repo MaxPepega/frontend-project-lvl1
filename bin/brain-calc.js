@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import numberCalculated from '../game/number-calc.js';
+import numberCalculated from '../src/games/number-calc.js';
 
 numberCalculated();
