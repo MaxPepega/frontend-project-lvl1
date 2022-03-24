@@ -3,8 +3,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f46a36664e91339f28e3/maintainability)](https://codeclimate.com/github/MaxPepega/frontend-project-lvl1/maintainability)
 
-Frontend-project-lvl1 game-life
-================================
+Frontend-project-lvl1
+=====================
 
 Первый проект в курсе 
 
