@@ -52,7 +52,7 @@ function determinantNOD() {
 }
 function arrayConstruct() {
   const Array = [];
-  const lengthProgession = 6;
+  const lengthProgession = getRandomInt(6, 7);
   const firstNumber = getRandomInt(1, 100);
   const stepProgression = getRandomInt(1, 10);
   Array[0] = firstNumber;
