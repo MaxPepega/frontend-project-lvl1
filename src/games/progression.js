@@ -11,7 +11,7 @@ export function brainProgression() {
     const trueSerias = seriasNum.slice();
     const rndNum = getRandomInt(1, 5);
     seriasNum[rndNum] = '..';
-    console.log(`Question: ${seriasNum}`);
+    console.log(`Question: ${seriasNum.join(' ')}`);
     seriasNum[rndNum] = Number(readLineSync.question('Your answer: '));
     if (seriasNum[rndNum] === trueSerias[rndNum]) {
       correctAnsw();
