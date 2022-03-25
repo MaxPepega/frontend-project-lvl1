@@ -1,9 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/MaxPepega/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/MaxPepega/frontend-project-lvl1/actions)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/f46a36664e91339f28e3/maintainability)](https://codeclimate.com/github/MaxPepega/frontend-project-lvl1/maintainability)
-
-[![example workflow](https://github.com/MaxPepega/frontend-project-lvl1/workflows/makefile/badge.svg)](https://github.com/MaxPepega/frontend-project-lvl1/actions)
+[![Make lint](https://github.com/MaxPepega/frontend-project-lvl1/workflows/makefile/badge.svg)](https://github.com/MaxPepega/frontend-project-lvl1/actions)
 
 
 Frontend-project-lvl1
