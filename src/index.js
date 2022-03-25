@@ -35,20 +35,20 @@ function unCorrectAnsw(yourAnsw, trueAnsw) {
 function Congratulations() {
   console.log(`Congratulations, ${conteinerName.named}!`);
 }
-function determinantNOD() {
-  // eslint-disable-next-line no-var
-  var x = arguments[0];
-  let i;
-  for (i = 1; i < arguments.length; i += 1) {
-    // eslint-disable-next-line prefer-rest-params
-    let y = arguments[i];
-    while (x && y) {
-      // eslint-disable-next-line no-unused-expressions
-      x > y ? x %= y : y %= x;
+function determinantNOD(a, b) {
+  let gcd;
+  while (a !== b) {
+    if (a > b) {
+      // eslint-disable-next-line no-param-reassign
+      a -= b;
+    } else {
+      // eslint-disable-next-line no-param-reassign
+      b -= a;
     }
-    x += y;
   }
-  return x;
+  // eslint-disable-next-line prefer-const
+  gcd = a;
+  return gcd;
 }
 function arrayConstruct() {
   const Array = [];

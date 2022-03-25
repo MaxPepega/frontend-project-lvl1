@@ -1,6 +1,6 @@
 import readLineSync from 'readline-sync';
 import {
-  getRandomInt, askName, correctAnsw, Congratulations, determinantNOD, unCorrectAnsw, amountRound,
+  getRandomInt, askName, correctAnsw, Congratulations, determinantNOD, unCorrectAnsw, amountRound
 } from '../index.js';
 
 export function gcd() {
@@ -8,8 +8,8 @@ export function gcd() {
   const round = amountRound();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 1; i <= round; i += 1) {
-    const number1 = getRandomInt(1, 10);
-    const number2 = getRandomInt(1, 10);
+    const number1 = getRandomInt(1, 100);
+    const number2 = getRandomInt(1, 100);
     console.log(`Question: ${number1} ${number2}`);
     let trueAnsw = 0;
     // eslint-disable-next-line no-use-before-define
