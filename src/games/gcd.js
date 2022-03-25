@@ -1,6 +1,6 @@
 import readLineSync from 'readline-sync';
 import {
-  getRandomInt, askName, correctAnsw, Congratulations, determinantNOD, unCorrectAnsw, amountRound
+  getRandomInt, askName, correctAnsw, Congratulations, determinantNOD, unCorrectAnsw, amountRound,
 } from '../index.js';
 
 export function gcd() {
