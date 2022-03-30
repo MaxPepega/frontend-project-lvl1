@@ -7,62 +7,24 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
-function amountRound() {
-  const gameRound = 3;
-  return gameRound;
-}
-function getRandomSymbol() {
-  const symbol = ['+', '-', '*'];
-  const rnd = Math.floor(Math.random() * 3);
-  return symbol[rnd];
-}
-const conteinerName = {};
-function askName() {
+function gamesEngine(rules, value) {
   console.log('Welcome to the Brain Games!');
   const name = readLineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  conteinerName.named = name;
-  return name;
-}
-function correctAnsw() {
-  console.log('Correct!');
-}
-function unCorrectAnsw(yourAnsw, trueAnsw) {
-  const myName = conteinerName.named;
-  console.log(`"${yourAnsw}" is wrong answer ;(. Correct answer was "${trueAnsw}".`);
-  console.log(`Let's try again, ${myName}!`);
-}
-function Congratulations() {
-  console.log(`Congratulations, ${conteinerName.named}!`);
-}
-function determinantNOD(a, b) {
-  let gcd;
-  while (a !== b) {
-    if (a > b) {
-      // eslint-disable-next-line no-param-reassign
-      a -= b;
+  const rounds = 3;
+  console.log(`${rules}`);
+  for (let i = 1; i <= rounds; i += 1) {
+    const { question, correctAnswer } = value();
+    console.log(`Question: ${question}`);
+    const answer = readLineSync.question('Your answer: ');
+    if (answer === correctAnswer) {
+      console.log('Correct!');
     } else {
-      // eslint-disable-next-line no-param-reassign
-      b -= a;
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}"`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
   }
-  // eslint-disable-next-line prefer-const
-  gcd = a;
-  return gcd;
+  console.log(`Congratulations, ${name}!`);
 }
-function arrayConstruct() {
-  const Array = [];
-  const lengthProgession = getRandomInt(6, 10);
-  const firstNumber = getRandomInt(1, 100);
-  const stepProgression = getRandomInt(1, 10);
-  Array[0] = firstNumber;
-  for (let i = 1; i <= lengthProgession; i += 1) {
-    Array[i] = Array[i - 1] + stepProgression;
-  }
-  return Array;
-}
-
-export {
-  askName, getRandomInt, getRandomSymbol, correctAnsw, unCorrectAnsw, Congratulations,
-  determinantNOD, amountRound, arrayConstruct,
-};
+export { getRandomInt, gamesEngine };

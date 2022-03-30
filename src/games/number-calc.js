@@ -1,37 +1,33 @@
-import readLineSync from 'readline-sync';
-import {
-  askName, getRandomInt, getRandomSymbol, correctAnsw, Congratulations, unCorrectAnsw, amountRound,
-} from '../index.js';
+import { getRandomInt, gamesEngine } from '../index.js';
 
-const numberCalculated = () => {
-  askName();
-  console.log('What is the result of the expression?');
-  const round = amountRound();
-  for (let i = 1; i <= round; i += 1) {
-    const randomSymb = getRandomSymbol();
-    const number1 = getRandomInt(1, 100);
-    const number2 = getRandomInt(1, 100);
-    const Question = `${number1} ${randomSymb} ${number2}`;
-    console.log(`Question: ${Question}`);
-    const yourAnsw = readLineSync.question('Your answer: ');
-    let trueAnsw = 0;
-    if (randomSymb === '-') {
-      trueAnsw = `${number1 - number2}`;
-    }
-    if (randomSymb === '+') {
-      trueAnsw = `${number1 + number2}`;
-    }
-    if (randomSymb === '*') {
-      trueAnsw = `${number1 * number2}`;
-    }
-    if (trueAnsw === yourAnsw) {
-      correctAnsw();
-    } else {
-      unCorrectAnsw(yourAnsw, trueAnsw);
-      return;
-    }
+const rules = 'What is the result of the expression?';
+
+function calc(number1, number2, operator) {
+  switch (operator) {
+    case '+':
+      return number1 + number2;
+    case '-':
+      return number1 - number2;
+    case '*':
+      return number1 * number2;
+    default:
+      throw new Error('Operator not supported');
   }
-  Congratulations();
-};
+}
+function getRandomSymbol() {
+  const symbol = ['+', '-', '*'];
+  const rnd = Math.floor(Math.random() * 3);
+  return symbol[rnd];
+}
 
-export default numberCalculated;
+function value() {
+  const operator = getRandomSymbol();
+  console.log(operator);
+  const number1 = getRandomInt(1, 100);
+  const number2 = getRandomInt(1, 100);
+  const question = `${number1} ${operator} ${number2}`;
+  const correctAnswer = String(calc(number1, number2, operator));
+  return { question, correctAnswer };
+}
+
+export default () => gamesEngine(rules, value);

@@ -1,38 +1,24 @@
-import readLineSync from 'readline-sync';
-import {
-  getRandomInt, askName, correctAnsw, Congratulations, unCorrectAnsw, amountRound,
-} from '../index.js';
+import { getRandomInt, gamesEngine } from '../index.js';
 
-function prime() {
-  askName();
-  const round = amountRound();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
-  for (let i = 1; i <= round; i += 1) {
-    const randomNumber = getRandomInt(1, 100);
-    let flag = true;
-    for (let j = 2; j <= randomNumber / 2; j += 1) {
-      if (randomNumber % j === 0) {
-        flag = false;
-        break;
-      }
-    }
-    console.log(`Question: ${randomNumber}`);
-    const yourAnsw = readLineSync.question('Your answer: ');
-    let trueAnsw = 'no';
-    const fakeYes = 'yes';
-    if (yourAnsw === 'yes' && flag === true) {
-      correctAnsw();
-    } else if (yourAnsw === 'no' && flag === false) {
-      correctAnsw();
-    } else if (yourAnsw === 'yes' && flag === false) {
-      unCorrectAnsw(yourAnsw, trueAnsw);
-      return;
-    } else if (yourAnsw === 'no' && flag === true) {
-      trueAnsw = fakeYes;
-      unCorrectAnsw(yourAnsw, trueAnsw);
-      return;
+const rules = 'Answer "yes" if the number is prime, otherwise answer "no".';
+
+function prime(number) {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i <= number / 2; i += 1) {
+    if (number % i === 0) {
+      return false;
     }
   }
-  Congratulations();
+  return true;
 }
-export default prime;
+
+function value() {
+  const number = getRandomInt(1, 100);
+  const question = String(number);
+  const correctAnswer = prime(number) ? 'yes' : 'no';
+  return { question, correctAnswer };
+}
+
+export default () => gamesEngine(rules, value);
