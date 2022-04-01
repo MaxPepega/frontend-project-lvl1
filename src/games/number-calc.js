@@ -1,8 +1,9 @@
-import { getRandomInt, gamesEngine } from '../index.js';
+import gamesEngine from '../index.js';
+import getRandomInt from '../utils.js';
 
-const rules = 'What is the result of the expression?';
+const rule = 'What is the result of the expression?';
 
-function calc(number1, number2, operator) {
+const calc = (number1, number2, operator) => {
   switch (operator) {
     case '+':
       return number1 + number2;
@@ -11,23 +12,19 @@ function calc(number1, number2, operator) {
     case '*':
       return number1 * number2;
     default:
-      throw new Error('Operator not supported');
+      throw new Error(`This operator "${operator}" is not supported:(`);
   }
-}
-function getRandomSymbol() {
-  const symbol = ['+', '-', '*'];
-  const rnd = Math.floor(Math.random() * 3);
-  return symbol[rnd];
-}
+};
 
-function value() {
-  const operator = getRandomSymbol();
-  console.log(operator);
+const getGameResult = () => {
+  const symbols = ['+', '-', '*'];
+  const randomize = Math.floor(Math.random() * 3);
+  const operator = symbols[randomize];
   const number1 = getRandomInt(1, 100);
   const number2 = getRandomInt(1, 100);
   const question = `${number1} ${operator} ${number2}`;
   const correctAnswer = String(calc(number1, number2, operator));
   return { question, correctAnswer };
-}
+};
 
-export default () => gamesEngine(rules, value);
+export default () => gamesEngine(rule, getGameResult);

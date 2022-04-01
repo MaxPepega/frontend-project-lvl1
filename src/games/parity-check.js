@@ -1,13 +1,14 @@
-import { getRandomInt, gamesEngine } from '../index.js';
+import gamesEngine from '../index.js';
+import getRandomInt from '../utils.js';
 
-const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-const even = (number) => number % 2 === 0;
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+const getEvenNumber = (number) => number % 2 === 0;
 
-function value() {
+const getGameResult = () => {
   const number = getRandomInt(1, 100);
   const question = String(number);
-  const correctAnswer = even(number) ? 'yes' : 'no';
+  const correctAnswer = getEvenNumber(number) ? 'yes' : 'no';
   return { question, correctAnswer };
-}
+};
 
-export default () => gamesEngine(rules, value);
+export default () => gamesEngine(rule, getGameResult);

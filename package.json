@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/MaxPepega/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/MaxPepega/frontend-project-lvl1/actions)",
+  "version": "1.1.0",
+  "description": "Frontend project lvl1 - gamelife",
   "main": "index.js",
   "type": "module",
   "bin": {
