@@ -5,7 +5,7 @@ const gamesEngine = (rule, getGameResult) => {
   const name = readLineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   const round = 3;
-  console.log(`${rule}`);
+  console.log(rule);
 
   for (let i = 1; i <= round; i += 1) {
     const { question, correctAnswer } = getGameResult();

@@ -3,7 +3,7 @@ import getRandomInt from '../utils.js';
 
 const rule = 'Answer "yes" if the number is prime, otherwise answer "no".';
 
-const prime = (number) => {
+const isPrimeNumber = (number) => {
   if (number < 2) {
     return false;
   }
@@ -20,7 +20,7 @@ const prime = (number) => {
 const getGameResult = () => {
   const number = getRandomInt(1, 100);
   const question = String(number);
-  const correctAnswer = prime(number) ? 'yes' : 'no';
+  const correctAnswer = isPrimeNumber(number) ? 'yes' : 'no';
   return { question, correctAnswer };
 };
 

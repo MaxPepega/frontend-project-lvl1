@@ -5,12 +5,12 @@ const rule = 'What number is missing in the progression?';
 const lengthProgession = 10;
 
 const arrayConstruct = (stepProgression, firstNumber) => {
-  const Array = [];
-  Array[0] = firstNumber;
+  const generatedSetNumber = [];
+  generatedSetNumber[0] = firstNumber;
   for (let i = 1; i <= lengthProgession; i += 1) {
-    Array[i] = Array[i - 1] + stepProgression;
+    generatedSetNumber[i] = generatedSetNumber[i - 1] + stepProgression;
   }
-  return Array;
+  return generatedSetNumber;
 };
 
 const getGameResult = () => {
