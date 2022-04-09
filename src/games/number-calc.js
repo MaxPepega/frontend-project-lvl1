@@ -18,7 +18,7 @@ const calc = (number1, number2, operator) => {
 
 const getGameResult = () => {
   const symbols = ['+', '-', '*'];
-  const randomize = getRandomInt(0, symbols.length);
+  const randomize = getRandomInt(0, symbols.length - 1);
   const operator = symbols[randomize];
   const number1 = getRandomInt(1, 100);
   const number2 = getRandomInt(1, 100);
